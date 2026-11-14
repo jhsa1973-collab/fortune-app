@@ -59,6 +59,20 @@ body {
 }
 .ganzhi { color: var(--accent); }
 
+/* 메뉴 탭 */
+.tabs {
+  display: grid; grid-template-columns: 1fr 1fr;
+  padding: 4px; gap: 4px;
+  background: var(--accent-soft); border-radius: 12px;
+}
+.tab {
+  font: inherit; font-weight: 600; cursor: pointer;
+  padding: 10px 8px; border: 0; border-radius: 9px;
+  background: transparent; color: var(--muted);
+}
+.tab[aria-selected="true"] { background: var(--surface); color: var(--accent); box-shadow: 0 1px 3px rgba(20, 24, 60, .12); }
+.tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
 /* 띠 선택 */
 .picker { display: grid; gap: 10px; }
 .picker-row { display: flex; gap: 8px; align-items: end; flex-wrap: wrap; }
@@ -118,6 +132,32 @@ body {
 .lucky div { border-top: 1px solid var(--line); padding-top: 8px; min-width: 0; }
 .lucky dt { font-size: 11.5px; color: var(--muted); letter-spacing: .04em; }
 .lucky dd { margin: 0; font-weight: 600; color: var(--gold); }
+
+/* 신년운세: 관계 배지, 계절 흐름, 좋은 달/조심할 달 */
+.tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  display: inline-flex; gap: 6px; align-items: baseline;
+  padding: 4px 10px; border-radius: 999px;
+  border: 1px solid var(--seal); color: var(--seal); font-size: 12.5px;
+}
+.tag.good { border-color: var(--accent); color: var(--accent); }
+.tag span { color: var(--muted); font-size: 11.5px; }
+
+.seasons { display: grid; gap: 8px; }
+.seasons h3 { margin: 0; font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--muted); }
+.seasons dl { margin: 0; display: grid; gap: 8px; }
+.seasons dl div { display: grid; grid-template-columns: 2.6em minmax(0, 1fr); gap: 10px; align-items: baseline; }
+.seasons dt { font-family: var(--font-display); font-weight: 700; color: var(--accent); }
+.seasons dd { margin: 0; font-size: 14px; min-width: 0; }
+
+.months { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.months div { padding: 10px 12px; border-radius: 10px; background: var(--accent-soft); min-width: 0; }
+.months dt { font-size: 11.5px; color: var(--muted); letter-spacing: .04em; }
+.months dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.months .good dd { color: var(--accent); }
+.months .caution dd { color: var(--seal); }
+
+.note { margin: 0; font-size: 12.5px; color: var(--muted); }
 
 .advice { margin: 0; font-family: var(--font-display); font-size: 17px; line-height: 1.5; border-left: 3px solid var(--seal); padding-left: 12px; }
 

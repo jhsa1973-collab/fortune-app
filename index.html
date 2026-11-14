@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>열두띠 오늘운세</title>
-<meta name="description" content="띠를 고르면 오늘의 총운, 금전운, 애정운, 건강운과 행운의 색·숫자를 알려 드려요.">
+<meta name="description" content="띠를 고르면 오늘의 운세와 신년운세(총운, 금전·애정·건강운, 좋은 달, 행운의 색·숫자)를 알려 드려요.">
 <meta name="theme-color" content="#2e3f8f">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png">
@@ -24,6 +24,11 @@
     <p class="eyebrow ganzhi" id="ganzhi"></p>
   </header>
 
+  <nav class="tabs" role="tablist" aria-label="운세 메뉴">
+    <button type="button" class="tab" role="tab" id="tab-today" aria-controls="card" aria-selected="true">오늘의 운세</button>
+    <button type="button" class="tab" role="tab" id="tab-newyear" aria-controls="card" aria-selected="false" tabindex="-1">신년운세</button>
+  </nav>
+
   <section class="picker" aria-label="띠 고르기">
     <div class="picker-row">
       <label for="birth-year">출생 연도
@@ -34,7 +39,7 @@
     <div class="signs" id="signs"></div>
   </section>
 
-  <article class="card" id="card" aria-live="polite">
+  <article class="card" id="card" role="tabpanel" aria-live="polite">
     <p class="status">운세를 불러오는 중이에요…</p>
   </article>
 

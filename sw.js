@@ -1,5 +1,5 @@
 // 오프라인 지원: 화면 파일은 캐시 우선, 운세 파일은 네트워크 우선(실패 시 캐시)
-const VERSION = 'v1';
+const VERSION = 'v2';
 const SHELL = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png'];
 
 self.addEventListener('install', (e) => {
