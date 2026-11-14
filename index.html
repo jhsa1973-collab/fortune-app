@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>열두띠 오늘운세</title>
+<meta name="description" content="띠를 고르면 오늘의 총운, 금전운, 애정운, 건강운과 행운의 색·숫자를 알려 드려요.">
+<meta name="theme-color" content="#2e3f8f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="오늘운세">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header class="head">
+    <p class="eyebrow">열두띠 오늘운세</p>
+    <h1 id="date">오늘의 운세</h1>
+    <p class="eyebrow ganzhi" id="ganzhi"></p>
+  </header>
+
+  <section class="picker" aria-label="띠 고르기">
+    <div class="picker-row">
+      <label for="birth-year">출생 연도
+        <input id="birth-year" type="text" inputmode="numeric" maxlength="4" placeholder="예: 1990" autocomplete="bday-year">
+      </label>
+    </div>
+    <p class="hint" id="hint" aria-live="polite"></p>
+    <div class="signs" id="signs"></div>
+  </section>
+
+  <article class="card" id="card" aria-live="polite">
+    <p class="status">운세를 불러오는 중이에요…</p>
+  </article>
+
+  <footer class="foot">
+    <p id="generated"></p>
+    <p>재미로 보는 운세예요. 중요한 결정은 스스로 판단해 주세요.</p>
+  </footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
